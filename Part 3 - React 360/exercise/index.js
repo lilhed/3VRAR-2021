@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-360';
-import Cafe from './cafe.js'
+import { AppRegistry, StyleSheet, Text, View} from 'react-360';
+
+import Entity from 'Entity';
 
 export default class exercise extends React.Component {
   render() {
@@ -15,6 +11,15 @@ export default class exercise extends React.Component {
           <Text style={styles.greeting}>
             Welcome to React 360
           </Text>
+        </View>
+        <View>
+          <Entity 
+          source={{
+            obj: asset('cafe.obj'),
+            mtl: asset('cafe.mtl'),
+          }}
+          
+          />
         </View>
       </View>
     );
@@ -42,4 +47,3 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('exercise', () => exercise);
-AppRegistry.registerComponent('Cafe', () => Cafe);
