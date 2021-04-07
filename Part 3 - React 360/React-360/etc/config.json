@@ -4,14 +4,14 @@
     {
       "id": "hallA",
       "title": "Lava lake",
-      "image": "panos/hallA.jpg",
-      "preview": "panos/hallAPreview.jpg",
+      "image": "images/hallA.jpg",
+      "preview": "images/hallAPreview.jpg",
       "doors": [
         {
           "sceneId": "lobby",
           "location": {
-            "left": 2200,
-            "top": 900
+            "left": 1200,
+            "top": 610
           }
         }
       ],
@@ -49,13 +49,13 @@
     {
       "id": "hallB",
       "title": "Desert",
-      "image": "panos/hallB.jpg",
-      "preview": "panos/hallBPreview.jpg",
+      "image": "images/hallB.jpg",
+      "preview": "images/hallBPreview.jpg",
       "doors": [
         {
           "sceneId": "lobby",
           "location": {
-            "left": 1100,
+            "left": 250,
             "top": 610
           }
         }
@@ -65,20 +65,20 @@
     {
       "id": "lobby",
       "title": "Lobby",
-      "image": "panos/lobby.jpg",
-      "preview": "panos/lobbyPreview.jpg",
+      "image": "images/lobby.jpg",
+      "preview": "images/lobbyPreview.jpg",
       "doors": [
         {
           "sceneId": "hallA",
           "location": {
-            "left": 4300,
+            "left": 4100,
             "top": 610
           }
         },
         {
           "sceneId": "hallB",
           "location": {
-            "left": 2300,
+            "left": 2800,
             "top": 610
           }
         }

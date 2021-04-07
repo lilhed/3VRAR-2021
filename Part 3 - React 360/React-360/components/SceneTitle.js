@@ -39,7 +39,7 @@ export default class SceneTitle extends React.Component {
 const styles = StyleSheet.create({
   box: {
     padding: 20,
-    left: 4680 / 2,
+    left: 3350,
     top: 500,
     backgroundColor: "#1eaaf7",
     borderColor: "#639dda",
