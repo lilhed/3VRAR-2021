@@ -1,53 +1,27 @@
-import React from 'react';
-import {
-  asset,
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-360';
-import Entity from 'Entity';
+import React, { Component } from 'react';
+import { AppRegistry, } from 'react-360';
 
-export default class app extends React.Component {
-  render() {
-    return (
-      <View style={styles.panel}>
-        <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>
-            Welcome to React 360
-          </Text>
-        </View>
-        <View>
-          <Entity
-            source={{
-              obj: asset('Chair.obj'),
-              mtl: asset('Chair.mtl')
-            }}
-          />
-        </View>
-      </View>
-    );
+import Home from './Home';
+import Cinema from './Cinema';
+
+export default class App extends Component {
+  state = {
+    room: 'home'
   }
-};
 
-const styles = StyleSheet.create({
-  panel: {
-    // Fill the entire surface
-    width: 1000,
-    height: 600,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  greetingBox: {
-    padding: 20,
-    backgroundColor: '#000000',
-    borderColor: '#639dda',
-    borderWidth: 2,
-  },
-  greeting: {
-    fontSize: 30,
-  },
-});
+  setRoom(room) {
+    this.setState({ room: room || 'home' })
+  }
 
-AppRegistry.registerComponent('app', () => app);
+  render() {
+    switch(this.state.room){
+      case 'cinema':
+        return <Cinema setRoom={(room) => this.setRoom(room)} />
+      default:
+        return <Home setRoom={(room) => this.setRoom(room)} />
+    }
+
+  }
+}
+
+AppRegistry.registerComponent('App', () => App);
