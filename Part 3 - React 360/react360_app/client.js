@@ -2,6 +2,8 @@
 // If you want to modify your application's content, start in "index.js"
 
 import {ReactInstance, Location} from 'react-360-web';
+import {AppRegistry} from "react-360";
+import Trucmoche from "./models/Trucmoche";
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
@@ -17,7 +19,7 @@ function init(bundle, parent, options = {}) {
   );
 
   // Load the initial environment
-  r360.compositor.setBackground(r360.getAssetURL('Test_C.jpg'));
+  //r360.compositor.setBackground(r360.getAssetURL('Test_C.jpg'));
   const location = new Location([-390, -145, -55]);
   r360.renderToLocation(r360.createRoot('trucmoche', { }), location);
 }

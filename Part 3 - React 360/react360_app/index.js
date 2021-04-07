@@ -5,33 +5,29 @@ import {
   Text,
   View,
 } from 'react-360';
+import Living from "./views/Living";
+import Bathroom from "./views/Bathroom";
 import Trucmoche from "./models/Trucmoche";
+
 
 export default class react360_app extends React.Component {
   state = {
-    room: "salon"
+    room: 'living'
   };
 
   setRoom(room) {
-    this.setState({room: room || "salon"})
+    this.setState({room: room || 'living'})
   }
 
   render() {
     switch (this.state.room){
-      case "salon":
-        return <Room setRoom={(room) => this.setRoom(room)} />
-        break;
-      case "sdb":
-        return <Room setRoom={(room) => this.setRoom(room)} />
-        break;
+      case 'living':
+        return <Living setRoom={(room) => this.setRoom(room)} />
+      case 'bathroom':
+        return <Bathroom setRoom={(room) => this.setRoom(room)} />
       default:
         return <Text>No Matching</Text>
     }
-    return (
-      <View>
-
-      </View>
-    );
   }
 };
 
