@@ -6,10 +6,9 @@ import {
   View,
   Model,
   Video,
-  VrButton,
+  VrButton
 } from 'react-360';
 import { Scenes } from "../index";
-import {Module} from "react-360-web";
 import staticAssetURL from "react-360/Libraries/Utilities/staticAssetURL";
 
 const SCENE_BG = asset("./scenes/360_cinemoche.jpg");
@@ -57,6 +56,7 @@ export default class Cinemoche extends React.Component {
           source={{ uri: staticAssetURL("./videos/cinemoche_movie.mp4") }}
           stereo="2D"
           loop={true}
+          controls={true}
         />
 
         <View>
