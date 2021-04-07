@@ -1,0 +1,97 @@
+{
+  "initialSceneId": "lobby",
+  "scenes": [
+    {
+      "id": "hallA",
+      "title": "Lava lake",
+      "image": "panos/hallA.jpg",
+      "preview": "panos/hallAPreview.jpg",
+      "doors": [
+        {
+          "sceneId": "lobby",
+          "location": {
+            "left": 2200,
+            "top": 900
+          }
+        }
+      ],
+      "hints": [
+        {
+          "description": "Fire",
+          "location": {
+            "left": 2300,
+            "top": 350
+          }
+        },
+        {
+          "description": "Stone",
+          "location": {
+            "left": 800,
+            "top": 800
+          }
+        },
+        {
+          "description": "Tree",
+          "location": {
+            "left": 3250,
+            "top": 540
+          }
+        },
+        {
+          "description": "Grass",
+          "location": {
+            "left": 3620,
+            "top": 700
+          }
+        }
+      ]
+    },
+    {
+      "id": "hallB",
+      "title": "Desert",
+      "image": "panos/hallB.jpg",
+      "preview": "panos/hallBPreview.jpg",
+      "doors": [
+        {
+          "sceneId": "lobby",
+          "location": {
+            "left": 1100,
+            "top": 610
+          }
+        }
+      ],
+      "hints": []
+    },
+    {
+      "id": "lobby",
+      "title": "Lobby",
+      "image": "panos/lobby.jpg",
+      "preview": "panos/lobbyPreview.jpg",
+      "doors": [
+        {
+          "sceneId": "hallA",
+          "location": {
+            "left": 4300,
+            "top": 610
+          }
+        },
+        {
+          "sceneId": "hallB",
+          "location": {
+            "left": 2300,
+            "top": 610
+          }
+        }
+      ],
+      "hints": [
+        {
+          "description": "Nether",
+          "location": {
+            "left": 1150,
+            "top": 300
+          }
+        }
+      ]
+    }
+  ]
+}
