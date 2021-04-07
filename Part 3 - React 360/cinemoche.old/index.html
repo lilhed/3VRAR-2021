@@ -1,0 +1,21 @@
+<html lang="fr">
+  <head>
+    <title>Cin&eacute;moche</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <style>body { margin: 0; }</style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="./client.bundle?platform=vr"></script>
+    <script>
+      React360.init(
+        'index.bundle?platform=vr&dev=true',
+        document.getElementById('container'),
+        {
+          assetRoot: 'static_assets/',
+        }
+      );
+    </script>
+  </body>
+</html>
+
